@@ -11,42 +11,47 @@ def test(nhiet_do: float, do_am: float):
         return "Cần kiểm tra lại"
     else:
         return "Loại bỏ"
-    
-if __name__ == "__main__":
+
+def main():
     print("Kiem thu bien single boundary")
-    print(test(25.0, 0.0)) 
-    print(test(25.0, 0.1)) 
-    print(test(25.0, 50.0)) 
-    print(test(25.0, 99.9))  
-    print(test(25.0, 100.0))
-    print(test(0.0, 50.0))  
-    print(test(0.1, 50.0))
-    print(test(49.9, 50.0)) 
-    print(test(50.0, 50.0))  
-    
+    assert test(25.0, 0.0) == "Cần kiểm tra lại"
+    assert test(25.0, 0.1) == "Cần kiểm tra lại"
+    assert test(25.0, 50.0) == "Đạt chất lượng"
+    assert test(25.0, 99.9) == "Cần kiểm tra lại"
+    assert test(25.0, 100.0) == "Cần kiểm tra lại"
+    assert test(0.0, 50.0) == "Cần kiểm tra lại"
+    assert test(0.1, 50.0) == "Cần kiểm tra lại"
+    assert test(49.9, 50.0) == "Cần kiểm tra lại"
+    assert test(50.0, 50.0) == "Cần kiểm tra lại"
+
     print("Kiem thu bang quyet dinh")
-    print(test(-1, -1))
-    print(test(-1, 30))
-    print(test(-1, 50))
-    print(test(-1, 70))
-    print(test(-1, 110))
-    print(test(10, -1))
-    print(test(10, 30))
-    print(test(10, 50))
-    print(test(10, 70))
-    print(test(10, 110))
-    print(test(25, -1))
-    print(test(25, 30))
-    print(test(25, 50))
-    print(test(25, 70))
-    print(test(25, 110))
-    print(test(40, -1))
-    print(test(40, 30))
-    print(test(40, 50))
-    print(test(40, 70))
-    print(test(40, 110))
-    print(test(60, -1))
-    print(test(60, 30))
-    print(test(60, 50))
-    print(test(60, 70))
-    print(test(60, 110))
+    assert test(-1, -1) == "Đầu vào không hợp lệ"
+    assert test(-1, 30) == "Đầu vào không hợp lệ"
+    assert test(-1, 50) == "Đầu vào không hợp lệ"
+    assert test(-1, 70) == "Đầu vào không hợp lệ"
+    assert test(-1, 110) == "Đầu vào không hợp lệ"
+    assert test(10, -1) == "Đầu vào không hợp lệ"
+    assert test(10, 30) == "Loại bỏ"
+    assert test(10, 50) == "Cần kiểm tra lại"
+    assert test(10, 70) == "Loại bỏ"
+    assert test(10, 110) == "Đầu vào không hợp lệ"
+    assert test(25, -1) == "Đầu vào không hợp lệ"
+    assert test(25, 30) == "Cần kiểm tra lại"
+    assert test(25, 50) == "Đạt chất lượng"
+    assert test(25, 70) == "Cần kiểm tra lại"
+    assert test(25, 110) == "Đầu vào không hợp lệ"
+    assert test(40, -1) == "Đầu vào không hợp lệ"
+    assert test(40, 30) == "Loại bỏ"
+    assert test(40, 50) == "Cần kiểm tra lại"
+    assert test(40, 70) == "Loại bỏ"
+    assert test(40, 110) == "Đầu vào không hợp lệ"
+    assert test(60, -1) == "Đầu vào không hợp lệ"
+    assert test(60, 30) == "Đầu vào không hợp lệ"
+    assert test(60, 50) == "Đầu vào không hợp lệ"
+    assert test(60, 70) == "Đầu vào không hợp lệ"
+    assert test(60, 110) == "Đầu vào không hợp lệ"
+
+
+if __name__ == "__main__":
+    main()
+
