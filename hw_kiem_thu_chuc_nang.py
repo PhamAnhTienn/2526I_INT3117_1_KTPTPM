@@ -13,7 +13,7 @@ def test(nhiet_do: float, do_am: float):
         return "Loại bỏ"
 
 def main():
-    print("Kiem thu bien single boundary")
+    print("Kiểm thử biên (Single boundary)")
     assert test(25.0, 0.0) == "Cần kiểm tra lại"
     assert test(25.0, 0.1) == "Cần kiểm tra lại"
     assert test(25.0, 50.0) == "Đạt chất lượng"
@@ -23,8 +23,9 @@ def main():
     assert test(0.1, 50.0) == "Cần kiểm tra lại"
     assert test(49.9, 50.0) == "Cần kiểm tra lại"
     assert test(50.0, 50.0) == "Cần kiểm tra lại"
+    print("Hoàn thành: Kiểm thử biên.")
 
-    print("Kiem thu bang quyet dinh")
+    print("Kiểm thử bảng quyết định")
     assert test(-1, -1) == "Đầu vào không hợp lệ"
     assert test(-1, 30) == "Đầu vào không hợp lệ"
     assert test(-1, 50) == "Đầu vào không hợp lệ"
@@ -50,8 +51,10 @@ def main():
     assert test(60, 50) == "Đầu vào không hợp lệ"
     assert test(60, 70) == "Đầu vào không hợp lệ"
     assert test(60, 110) == "Đầu vào không hợp lệ"
+    print("Hoàn thành: Kiểm thử bảng quyết định.")
 
 
 if __name__ == "__main__":
     main()
+
 
